@@ -44,6 +44,9 @@ function App() {
       <h2>Star Wars Characters</h2>
       <p>See the README of the project for instructions on completing this challenge</p>
       {/* ❗ Map over the data in state, rendering a Character at each iteration */}
+      {people !== undefined ? people.map(person => {
+        return <Character key={person.id} name={person.name} homeworld={person.homeworld.name} />
+      }) : null}
     </div>
   )
 }
